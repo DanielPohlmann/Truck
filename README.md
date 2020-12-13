@@ -48,6 +48,7 @@ Run  .windows\run-tests.bat
 * Vue.Js
 * Node.JS
 * JavaScript
+* SPA Application
 
 ### EVOLUTION
 
