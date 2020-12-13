@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\services\Volvo.Trucks.API\Volvo.Trucks.API.csproj" />
+    <ProjectReference Include="..\..\src\services\Volvo.Trucks.API\Volvo.Trucks.API.csproj" />
   </ItemGroup>
 
 </Project>

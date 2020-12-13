@@ -5,3 +5,5 @@ dotnet test --logger "trx;LogFileName=TestResults.trx" --logger "xunit;LogFileNa
 reportgenerator "-reports:**\BuildReports\Coverage\coverage.opencover.xml" "-targetdir:.\BuildReports\Coverage" -reporttypes:HTML;HTMLSummary
 
 start BuildReports\Coverage\index.htm
+
+pause
