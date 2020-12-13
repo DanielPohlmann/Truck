@@ -1,10 +1,10 @@
-# Welcome to Tucks API!
+# Welcome to Trucks API!
 
 Basic Architecture Application.
 
 ## RUN APLICATION 
 
-Requerid [Docker](https://www.docker.com) 
+Required [Docker](https://www.docker.com) 
 
 Run  .windows\run-docker-composer.bat
 
@@ -13,7 +13,7 @@ WebApp http://localhost:44362/
 
 ## RUN TESTS
 
-Requerid  Reportgenerator Globall
+Required  Reportgenerator Globall
 
 ```
 dotnet tool install -g dotnet-reportgenerator-globaltool
@@ -21,7 +21,7 @@ dotnet tool install -g dotnet-reportgenerator-globaltool
 
 Run  .windows\run-tests.bat
 
-## API VOLVO TRUCK 
+## API TRUCK 
 
 * .Net Core 3.1
 * Entity Framework
