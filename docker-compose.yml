@@ -1,0 +1,113 @@
+version: '3.6'
+
+#networks: 
+#    dockersql-network:
+#      driver: bridge
+
+services:
+    sqldata:
+        image: "microsoft/mssql-server-linux:2017-latest"
+        environment:
+            MSSQL_SA_PASSWORD: "VolVo1927_sySt3m"
+            ACCEPT_EULA: "Y"
+        #networks:
+            #- dockersql-network
+        ports:
+            - "1433:1433"  
+    volvo_trucks_api:
+        build: . 
+            #context: .
+            #dockerfile: src/services/Volvo.Trucks.API
+        ports:
+            - 44360:80
+          #- 32926:443
+        depends_on:
+            - sqldata
+        #networks:
+            #- dockersql-network
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            #- ASPNETCORE_URLS=http://+:80
+            #- ASPNETCORE_URLS=https://+:443;http://+:80
+            ##- ASPNETCORE_Kestrel_CertificatesDefault_Password=password
+            ##- ASPNETCORE_Kestrel_CertificatesDefault_Path=/https/aspnetapp.pfx
+            #- ASPNETCORE_Serilog_WriteTo0Args_indexFormat=pharmamanagerpatient-{0:yyyy.MM.dd}
+            #- ASPNETCORE_Serilog_WriteTo0Args_url=http://192.168.181.19:9200
+            #- ASPNETCORE_RedisConfiguration__ConnectionStrings=192.168.134.138,port:6379,defaultDatabase=1
+            #- ASPNETCORE_RedisConfiguration__Prefix=pharmamanagerpatient
+            #- ASPNETCORE_JWTConfiguration__PublicKeyPenPath=/key/jwt.local.key.pub
+            #- ASPNETCORE_JWTConfiguration__ValidIssuer=SSO
+            #- ASPNETCORE_DBSERVER_FUNCIONALCARD__DATA_SOURCE=vmbdcdes01dev.funcional.local\DBSERVERDEV
+            #- ASPNETCORE_DBSERVER_FUNCIONALCARD__INITIAL_CATALOG=funcionalcard
+            #- ASPNETCORE_DBSERVER_FUNCIONALCARD__USER_ID=appdotnet
+            #- ASPNETCORE_DBSERVER_FUNCIONALCARD__PASSWORD=appdotnetdev
+        #volumes:
+          #- ./.https:/https:ro
+          #- ./.jwt:/key:ro
+    volvo_webapp:
+        build: ./src/web/Volvo.WebApp
+        ports:
+          - 44362:80
+        #networks:
+            #- dockersql-network
+    #elasticsearch:
+    #    image: docker.elastic.co/elasticsearch/elasticsearch:7.5.1
+    #    volumes:
+    #        - .esdata:/usr/share/elasticsearch/data   
+    #    container_name: elasticsearch
+    #    ports:
+    #        - "9200:9200"
+    #    environment:
+    #        - bootstrap.memory_lock=true
+    #        - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    #        - discovery.type=single-node
+    #kibana:
+    #    image: docker.elastic.co/kibana/kibana:7.5.1
+    #    container_name: kibana
+    #    ports:
+    #        - "5601:5601"
+    #    depends_on:
+    #        - elasticsearch
+    #redis:
+    #    image: redis
+    #    command: redis-server --requirepass Redis2019!
+    #    ports:
+    #      - "6379:6379"
+    #sonarqube:
+    #    image: sonarqube:8.2-community
+    #    depends_on:
+    #      - db
+    #    ports:
+    #      - "9000:9000"
+    #    networks:
+    #      - dockersql-network
+    #    environment:
+    #      SONAR_JDBC_URL: jdbc:postgresql://db:5432/sonar
+    #      SONAR_JDBC_USERNAME: sonar
+    #      SONAR_JDBC_PASSWORD: sonar
+    #    volumes:
+    #      - sonarqube_data:/opt/sonarqube/data
+    #      - sonarqube_extensions:/opt/sonarqube/extensions
+    #      - sonarqube_logs:/opt/sonarqube/logs
+    #      - sonarqube_temp:/opt/sonarqube/temp
+    #dbsonar:
+    #    image: postgres
+    #    networks:
+    #      - dockersql-network
+    #    environment:
+    #      POSTGRES_USER: sonar
+    #      POSTGRES_PASSWORD: sonar
+    #    volumes:
+    #      - postgresql:/var/lib/postgresql
+    #      # This needs explicit mapping due to https://github.com/docker-library/postgres/blob/4e48e3228a30763913ece952c611e5e9b95c8759/Dockerfile.template#L52
+    #      - postgresql_data:/var/lib/postgresql/data
+    
+    
+#volumes:
+    #esdata:
+    #sonarqube_data:
+    #sonarqube_extensions:
+    #sonarqube_logs:
+    #sonarqube_temp:
+    #postgresql:
+    #postgresql_data:
