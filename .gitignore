@@ -145,6 +145,7 @@ _TeamCity*
 coverage*.json
 coverage*.xml
 coverage*.info
+BuildReports
 
 # Visual Studio code coverage results
 *.coverage
