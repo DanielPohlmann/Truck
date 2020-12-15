@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5EEBC85D-50B6-43D3-91C8-6B3DD150BCA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{38F095BB-C0A0-4C6F-9C60-240A15987529}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{62B4AA3D-E3FC-4454-8AB2-47AE2601CCC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volvo.Core", "src\buildingblocks\Volvo.Core\Volvo.Core.csproj", "{8E329AF3-C4F3-4202-9478-74F91AD616D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volvo.Trucks.API", "src\services\Volvo.Trucks.API\Volvo.Trucks.API.csproj", "{B3113CA4-2F6A-43B8-99AA-F6F41EEA57C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{54E41D3C-020E-4688-B724-3BEBC48054F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volvo.WebApi.Core", "src\buildingblocks\Volvo.WebApi.Core\Volvo.WebApi.Core.csproj", "{193BB7F3-22FE-41DA-9F3D-AFA6D3CF7687}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{1D17C7D7-9984-4EEE-9F49-393D20534345}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Volvo.WebApp", "src\web\Volvo.WebApp\Volvo.WebApp.njsproj", "{399C5629-2FBC-4835-843B-792A59768595}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A147CA32-A297-41AB-BFE1-8D5AA808FD8E}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5453DACF-BD52-4D2E-8C14-A46BB506DCB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volvo.Trucks.API.Tests", "tests\Volvo.Trucks.API.Tests\Volvo.Trucks.API.Tests.csproj", "{F8D7A123-B08E-465C-B38D-FD77AB54B2CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FB250066-89A2-4510-BA70-57ABC322CD03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E329AF3-C4F3-4202-9478-74F91AD616D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E329AF3-C4F3-4202-9478-74F91AD616D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E329AF3-C4F3-4202-9478-74F91AD616D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E329AF3-C4F3-4202-9478-74F91AD616D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3113CA4-2F6A-43B8-99AA-F6F41EEA57C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3113CA4-2F6A-43B8-99AA-F6F41EEA57C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3113CA4-2F6A-43B8-99AA-F6F41EEA57C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3113CA4-2F6A-43B8-99AA-F6F41EEA57C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{193BB7F3-22FE-41DA-9F3D-AFA6D3CF7687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{193BB7F3-22FE-41DA-9F3D-AFA6D3CF7687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{193BB7F3-22FE-41DA-9F3D-AFA6D3CF7687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{193BB7F3-22FE-41DA-9F3D-AFA6D3CF7687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{399C5629-2FBC-4835-843B-792A59768595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{399C5629-2FBC-4835-843B-792A59768595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{399C5629-2FBC-4835-843B-792A59768595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{399C5629-2FBC-4835-843B-792A59768595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D7A123-B08E-465C-B38D-FD77AB54B2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D7A123-B08E-465C-B38D-FD77AB54B2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D7A123-B08E-465C-B38D-FD77AB54B2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D7A123-B08E-465C-B38D-FD77AB54B2CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62B4AA3D-E3FC-4454-8AB2-47AE2601CCC8} = {38F095BB-C0A0-4C6F-9C60-240A15987529}
+		{8E329AF3-C4F3-4202-9478-74F91AD616D9} = {62B4AA3D-E3FC-4454-8AB2-47AE2601CCC8}
+		{B3113CA4-2F6A-43B8-99AA-F6F41EEA57C4} = {5EEBC85D-50B6-43D3-91C8-6B3DD150BCA1}
+		{54E41D3C-020E-4688-B724-3BEBC48054F4} = {38F095BB-C0A0-4C6F-9C60-240A15987529}
+		{193BB7F3-22FE-41DA-9F3D-AFA6D3CF7687} = {54E41D3C-020E-4688-B724-3BEBC48054F4}
+		{399C5629-2FBC-4835-843B-792A59768595} = {1D17C7D7-9984-4EEE-9F49-393D20534345}
+		{F8D7A123-B08E-465C-B38D-FD77AB54B2CE} = {FB250066-89A2-4510-BA70-57ABC322CD03}
+		{FB250066-89A2-4510-BA70-57ABC322CD03} = {5453DACF-BD52-4D2E-8C14-A46BB506DCB8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DA5F9E5-C24D-4EB7-803A-7998478E45AC}
+	EndGlobalSection
+EndGlobal
